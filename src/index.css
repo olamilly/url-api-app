@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500;1,700&display=swap");
+
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Poppins", "sans-serif";
+}
+
+/* index.css */
+.background-with-overlay {
+  position: relative;
+  /* height: 22vh; */
+  background-image: url("./assets/images/bg-boost-desktop.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.background-with-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.background-with-overlay .content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  width: 100%;
+}
+
+.footer-with-overlay {
+  position: relative;
+  background-image: url("./assets/images/bg-boost-desktop.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.footer-with-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(30, 0, 50, 0.4);
+  /* Adjust the colorbackground-color: rgba(52, 2, 52, 0.4); and opacity */
+  z-index: 1;
+}
+
+.footer-with-overlay .content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 20px 60px;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+
+/* @media screen and (max-width: 985px) {
+  .background-with-overlay {
+    height: 25vh;
+  }
+  .footer-with-overlay {
+    height: 32vh;
+  }
+  .background-with-overlay .content {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .background-with-overlay {
+    height: 30vh;
+  }
+  .footer-with-overlay {
+    height: 32vh;
+  }
+  .background-with-overlay .content {
+    padding: 20px;
+  }
+} */
