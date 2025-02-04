@@ -38,6 +38,7 @@ function Main() {
   // local storage to retrieve stored data
   const [userlink, setLink] = useState(function () {
     const storedLink = localStorage.getItem("links");
+    console.log(storedLink);
     return storedLink ? JSON.parse(storedLink) : [];
   });
   const [value, setValue] = useState("");
